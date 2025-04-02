@@ -18,4 +18,4 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-CMD ["n8n start"]
+CMD ["sh", "-c", "npm install -g \"$CUSTOM_NPM_GLOBAL_PACKAGES\" && n8n start"]
