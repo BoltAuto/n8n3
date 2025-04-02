@@ -18,10 +18,10 @@ ENV DB_POSTGRESDB_PASSWORD=$PGPASSWORD
 ARG ENCRYPTION_KEY
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-# Install bash so we can use it in CMD
+# Install bash in Alpine image
 USER root
-RUN apt-get update && apt-get install -y bash
+RUN apk add --no-cache bash
 USER node
 
-# Start command using bash to run install + n8n
+# Runtime command using bash
 CMD ["bash", "-c", "npm install -g \"$CUSTOM_NPM_GLOBAL_PACKAGES\" && n8n start"]
