@@ -1,5 +1,5 @@
 [deploy]
-startCommand = "n8n start"
+startCommand = 'sh -c "npm install -g \"$CUSTOM_NPM_GLOBAL_PACKAGES\" && n8n start"'
 healthcheckPath = "/healthz"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
