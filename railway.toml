@@ -1,5 +1,5 @@
 [deploy]
-startCommand = 'bash -c "cd /home/node && npm install cheerio lodash && n8n start"'
+startCommand = 'bash -c "cd /usr/local/lib/node_modules/n8n && npm install cheerio lodash && n8n start"'
 healthcheckPath = "/healthz"
 healthcheckTimeout = 100
 restartPolicyType = "on_failure"
