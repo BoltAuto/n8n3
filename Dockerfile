@@ -24,4 +24,4 @@ RUN apk add --no-cache bash
 USER node
 
 # Runtime command using bash
-CMD ["bash", "-c", "npm install -g \"$CUSTOM_NPM_GLOBAL_PACKAGES\" && n8n start"]
+CMD ["n8n start"]
